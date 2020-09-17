@@ -1,4 +1,4 @@
-const countDownDate = new Date('Sep 17, 2020 20:00:00').getTime()
+const countDownDate = new Date('Sep 18, 2020 19:00:00').getTime()
 const startDate = new Date('Sep 17, 2020 10:00:00').getTime()
 const allTime = (countDownDate - startDate) / 1000
 const currentPosition = allTime - (countDownDate - new Date().getTime()) / 1000
@@ -59,7 +59,9 @@ let x = setInterval(function() {
 
   if (distance < 0) {
     clearInterval(x)
-    document.getElementById('demo').innerHTML = 'БАБАХ!'
+    setTimeout(() => {
+      document.location.href = 'https://khlebniy.com.ua/'
+    }, 2000)
   }
 }, 1000)
 
