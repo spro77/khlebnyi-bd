@@ -10,7 +10,9 @@ console.log('allTime :', allTime)
 console.log('currentPosition :', currentPosition)
 
 const cta = document.getElementById('button')
-cta.onclick = () => {}
+cta.onclick = () => {
+  document.location.reload()
+}
 
 const parseUrl = () => {
   switch (window.location.pathname) {
