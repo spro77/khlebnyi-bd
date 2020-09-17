@@ -1,5 +1,5 @@
-
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -14,10 +14,10 @@ html, body {
   line-height: 32px;
   text-align: center;
   text-transform: uppercase;
-  color:black;
+  color: black;
 }
 .txt span::before {
-  content: "\A";
+  content: '\A';
   white-space: pre;
 }
 .txt.bold {
@@ -35,9 +35,10 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 #illustration {
+  position: relative;
+  left: -10px;
   margin-top: 50px;
   overflow: visible;
   height: 100%;
@@ -50,15 +51,15 @@ html, body {
 
 #counter-box {
   position: relative;
-  top: -150px
+  top: -150px;
 }
 
 #counter {
-width: 267px;
-height: 101px;
-margin: 0 75px;
-border: 5.15948px solid #F6AD32;
-border-radius: 54px;
+  width: 267px;
+  height: 101px;
+  margin: 0 75px;
+  border: 5.15948px solid #f6ad32;
+  border-radius: 54px;
 }
 
 #button {
@@ -67,7 +68,7 @@ border-radius: 54px;
   align-items: center;
   width: 320px;
   height: 88px;
-  background: #F6AD32;
+  background: #f6ad32;
   border-radius: 18px;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.15);
 }
