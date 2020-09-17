@@ -11,7 +11,40 @@ const startDate = new Date('Sep 14, 2020 10:00:00').getTime()
 // countDownDate.setSeconds(countDownDate.getSeconds() + timeToBabax);
 
 const p = new URL(document.location.href)
-console.log(p)
+// console.log(p)
+
+const cta = document.getElementById('button')
+
+const parseUrl = () => {
+  switch (window.location.pathname) {
+    case 1:
+      return 'OLYMP'
+      break
+
+    case 2:
+      return 'KRESCH'
+      break
+
+    case 3:
+      return 'SHOTA'
+      break
+
+    case 4:
+      return 'PASSAGE'
+      break
+
+    case 5:
+      return 'BKH'
+      break
+
+    default:
+      return 'KBP'
+      break
+  }
+}
+
+document.getElementById('departure').innerHTML = `<p class='txt bold'>KHLBN<span>${parseUrl()}</span></p>`
+
 let x = setInterval(function() {
   let now = new Date().getTime()
   let distance = countDownDate - now
