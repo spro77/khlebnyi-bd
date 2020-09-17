@@ -16,23 +16,23 @@ cta.onclick = () => {
 
 const parseUrl = () => {
   switch (window.location.pathname) {
-    case 1:
+    case '/1':
       return 'OLYMP'
       break
 
-    case 2:
+    case '/2':
       return 'KRESCH'
       break
 
-    case 3:
+    case '/3':
       return 'SHOTA'
       break
 
-    case 4:
+    case '/4':
       return 'PASSAGE'
       break
 
-    case 5:
+    case '/5':
       return 'BKH'
       break
 
