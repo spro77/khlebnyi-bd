@@ -3,15 +3,15 @@
 // import MotionPathPlugin from 'MotionPathPlugin'
 gsap.registerPlugin(MotionPathPlugin)
 
-const timeToBabax = 5
+const countDownDate = new Date('Sep 17, 2020 20:00:00').getTime()
+const startDate = new Date('Sep 17, 2020 10:00:00').getTime()
+const allTime = (countDownDate - startDate) / 1000
+const currentPosition = allTime - (countDownDate - new Date()) / 1000
+const startPosition = 0
+const endPosition = currentPosition / allTime
 
-const countDownDate = new Date('Sep 19, 2020 10:00:00').getTime()
-const startDate = new Date('Sep 14, 2020 10:00:00').getTime()
-// const countDownDate = new Date()
-// countDownDate.setSeconds(countDownDate.getSeconds() + timeToBabax);
-
-const p = new URL(document.location.href)
-// console.log(p)
+console.log('allTime :', allTime)
+console.log('currentPosition :', currentPosition)
 
 const cta = document.getElementById('button')
 
@@ -48,6 +48,7 @@ document.getElementById('departure').innerHTML = `<p class='txt bold'>KHLBN<span
 let x = setInterval(function() {
   let now = new Date().getTime()
   let distance = countDownDate - now
+  // console.log(distance / 1000)
 
   // let days = Math.floor(distance / (1000 * 60 * 60 * 24))
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
@@ -64,9 +65,9 @@ let x = setInterval(function() {
 }, 1000)
 
 gsap.to('#plane', {
-  duration: timeToBabax,
-  delay: 1,
-  repeat: -1,
+  duration: 1,
+  // delay: 1,
+  // repeat: -1,
   // repeatDelay: 1,
   yoyo: true,
   ease: 'power1.inOut',
@@ -75,7 +76,9 @@ gsap.to('#plane', {
     align: '#path',
     autoRotate: true,
     alignOrigin: [0.5, 0.5],
-    start: 0,
-    end: 1
+    start: startPosition,
+    end: endPosition
   }
 })
+
+console.log(MotionPathPlugin.getLength('#path'))
