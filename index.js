@@ -41,6 +41,7 @@ const parseUrl = () => {
       break
   }
 }
+console.log(window.location.pathname, parseUrl())
 
 document.getElementById('departure').innerHTML = `<p class='txt bold'>KHLBN<span>${parseUrl()}</span></p>`
 
