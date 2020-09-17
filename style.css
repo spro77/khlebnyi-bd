@@ -69,7 +69,7 @@ body {
 .label {
   width: 120px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
 }
 
