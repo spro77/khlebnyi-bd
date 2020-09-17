@@ -2,7 +2,6 @@ const countDownDate = new Date('Sep 17, 2020 20:00:00').getTime()
 const startDate = new Date('Sep 17, 2020 10:00:00').getTime()
 const allTime = (countDownDate - startDate) / 1000
 const currentPosition = allTime - (countDownDate - new Date().getTime()) / 1000
-const startPosition = 0
 const endPosition = currentPosition / allTime
 const duration = allTime - currentPosition
 
@@ -11,6 +10,7 @@ console.log('allTime :', allTime)
 console.log('currentPosition :', currentPosition)
 
 const cta = document.getElementById('button')
+cta.onclick = () => {}
 
 const parseUrl = () => {
   switch (window.location.pathname) {
@@ -72,7 +72,7 @@ gsap.to('#plane', {
     align: '#path',
     autoRotate: true,
     alignOrigin: [0.5, 0.5],
-    start: startPosition,
+    start: 0,
     end: endPosition
   }
 })
