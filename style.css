@@ -105,6 +105,10 @@ body {
   width: 200px;
   font-family: 'Roboto Condensed', sans-serif;
 }
+#demo.end {
+  font-size: 36px;
+  width: 100%;
+}
 
 #button-container {
   margin-top: -80px;
@@ -136,7 +140,7 @@ body {
 }
 
 @media screen and (max-width: 550px) {
-  #counter > svg {
+  #ico-clock {
     display: none;
   }
 
@@ -178,6 +182,11 @@ body {
 
   #demo {
     font-size: 37px;
+  }
+  #demo.end {
+    font-size: 24px;
+    line-height: 24px;
+    width: 100%;
   }
 
   .label {

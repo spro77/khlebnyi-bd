@@ -1,10 +1,12 @@
-const countDownDate = new Date('Sep 18, 2020 19:00:00').getTime()
-const startDate = new Date('Sep 17, 2020 10:00:00').getTime()
+const countDownDate = new Date('Sep 19, 2020 17:37:00').getTime()
+const startDate = new Date('Sep 18, 2020 10:00:00').getTime()
+
 const allTime = (countDownDate - startDate) / 1000
 const currentPosition = allTime - (countDownDate - new Date().getTime()) / 1000
-const endPosition = currentPosition / allTime
+const endPosition = currentPosition / allTime > 1 ? 1 : currentPosition / allTime
 const duration = allTime - currentPosition
 
+console.log('endPosition :', endPosition)
 console.log('duration :', duration)
 console.log('allTime :', allTime)
 console.log('currentPosition :', currentPosition)
@@ -58,18 +60,18 @@ let x = setInterval(function() {
 
   if (distance < 0) {
     clearInterval(x)
-    setTimeout(() => {
-      document.location.href = 'https://khlebniy.com.ua/'
-    }, 2000)
+    document.getElementById('ico-clock').style.display = 'none'
+    document.getElementById('demo').classList.add('end')
+    document.getElementById('demo').innerHTML = 'Вечеринка началась'
   }
-}, 1000)
+})
 
 gsap.to('#plane', {
   duration: 1,
   // delay: 1,
   // repeat: -1,
   // repeatDelay: 1,
-  yoyo: true,
+  // yoyo: true,
   ease: 'power1.inOut',
   motionPath: {
     path: '#path',
