@@ -9,41 +9,40 @@ console.log('duration :', duration)
 console.log('allTime :', allTime)
 console.log('currentPosition :', currentPosition)
 
-const cta = document.getElementById('button')
-cta.onclick = () => {
-  document.location.reload()
+document.getElementById('button').onclick = () => {
+  document.location = parseUrl()[1]
 }
 
 const parseUrl = () => {
   switch (window.location.pathname) {
     case '/1':
-      return 'OLYMP'
+      return ['OLYMP', 'https://khlebniy.com.ua/q/a?10#c66']
       break
 
     case '/2':
-      return 'KRESCH'
+      return ['KRESCH', 'https://khlebniy.com.ua/q/a?10#c66']
       break
 
     case '/3':
-      return 'SHOTA'
+      return ['SHOTA', 'https://khlebniy.com.ua/q/a?10#c66']
       break
 
     case '/4':
-      return 'PASSAGE'
+      return ['PASSAGE', 'https://khlebniy.com.ua/q/a?10#c67']
       break
 
     case '/5':
-      return 'BKH'
+      return ['BKH', 'https://khlebniy.com.ua/q/a?10#c66']
       break
 
     default:
-      return 'KBP'
+      return ['KBP', 'https://kbp.aero/en/']
       break
   }
 }
 console.log(window.location.pathname, parseUrl())
 
-document.getElementById('departure').innerHTML = `<p class='txt bold'>KHLBN<span>${parseUrl()}</span></p>`
+document.getElementById('departure').innerHTML = `<p class='txt bold'>KHLBN<span>${parseUrl()[0]}</span></p>`
 
 let x = setInterval(function() {
   let now = new Date().getTime()
