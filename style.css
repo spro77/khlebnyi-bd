@@ -23,7 +23,16 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: scroll;
+}
+
+#container {
+  padding: 50px 0;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  /* min-height: 100%; */
+  display: flex;
 }
 
 .txt {
@@ -46,15 +55,6 @@ body {
 .row {
   display: flex;
   flex-direction: row;
-}
-
-#container {
-  padding: 50px 0 0 0;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  min-height: 100%;
-  display: flex;
 }
 
 #illustration {
@@ -132,7 +132,7 @@ body {
 
 @media screen and (max-width: 375px) {
   #container {
-    padding: 50px 15px 0 15px;
+    padding: 50px 15px;
   }
 
   #illustration {
@@ -152,15 +152,16 @@ body {
   }
 
   #counter {
-    width: 180px;
-    height: 80px;
+    width: 170px;
+    height: 40px;
     flex-direction: column;
     padding: 10px 0;
     margin: 0 10px;
     border: 3px solid #f6ad32;
   }
   #counter > svg {
-    height: 30px;
+    /* height: 30px; */
+    display: none;
   }
 
   #demo {
