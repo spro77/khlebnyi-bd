@@ -52,8 +52,11 @@ let x = setInterval(function() {
 
   // let days = Math.floor(distance / (1000 * 60 * 60 * 24))
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  hours = hours < 10 ? '0' + hours : hours
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+  minutes = minutes < 10 ? '0' + minutes : minutes
   let seconds = Math.floor((distance % (1000 * 60)) / 1000)
+  seconds = seconds < 10 ? '0' + seconds : seconds
 
   // document.getElementById('demo').innerHTML = days + 'д ' + hours + 'ч ' + minutes + 'м ' + seconds + 'с '
   document.getElementById('demo').innerHTML = hours + ':' + minutes + ':' + seconds
