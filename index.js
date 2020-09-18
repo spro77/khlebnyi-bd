@@ -38,7 +38,7 @@ const parseUrl = () => {
       break
 
     default:
-      return ['KBP', 'https://kbp.aero/en/']
+      return ['KHLBN', 'https://khlebniy.com.ua/#c66']
       break
   }
 }
